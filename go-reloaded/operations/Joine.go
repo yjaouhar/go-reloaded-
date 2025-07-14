@@ -1,6 +1,6 @@
 package op
 
-func Join_with_space(s []string, spc string) string {
+func JoinWithSpace(s []string, spc string) string {
 	rex := ""
 	for i, v := range s {
 		if i != len(s)-1 && s[len(s)-1] == "  " {

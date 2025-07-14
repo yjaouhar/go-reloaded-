@@ -30,7 +30,7 @@ func Quotes(str string) string {
 				if !Check_Space(word) {
 					Sl_String = append(Sl_String, Remove_Space(word))
 					Sl_String = append(Sl_String, "'")
-					if i != len(Sl_Rune)-1 && Sl_Rune[i+1] != ' ' && Sl_Rune[i+1] != '\'' && !Is_punc(string(Sl_Rune[i+1])) { // chcke after punctuation mark is have space
+					if i != len(Sl_Rune)-1 && Sl_Rune[i+1] != ' ' && Sl_Rune[i+1] != '\'' && !Ponctuation(string(Sl_Rune[i+1])) { // chcke after punctuation mark is have space
 						Sl_String = append(Sl_String, " ")
 					}
 					B_Q = ""

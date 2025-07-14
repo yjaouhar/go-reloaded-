@@ -5,7 +5,7 @@ func Punc(sl string) string {
 	slc := []rune{}
 
 	for i := 0; i < len(s); i++ {
-		if Is_punc(string(s[i])) {
+		if Ponctuation(string(s[i])) {
 
 			for _, v := range slc {
 				if v != ' ' {
@@ -29,7 +29,7 @@ func Punc(sl string) string {
 					}
 				}
 			}
-			if i < len(s)-1 && !Is_punc(string(s[i+1])) && (s[i+1]) != ' ' {
+			if i < len(s)-1 && !Ponctuation(string(s[i+1])) && (s[i+1]) != ' ' {
 				slc = append(slc, ' ')
 			}
 
@@ -40,11 +40,6 @@ func Punc(sl string) string {
 	return (string(slc))
 }
 
-func Is_punc(p string) bool {
-	for _, s := range p {
-		if s == '.' || s == ',' || s == '!' || s == '?' || s == ':' || s == ';' {
-			return true
-		}
-	}
-	return false
+func Ponctuation(p string) bool {
+	return p == "." || p == "," || p == "!" || p == "?" || p == ":" || p == ";"
 }

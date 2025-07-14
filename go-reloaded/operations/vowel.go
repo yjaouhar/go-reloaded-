@@ -11,7 +11,7 @@ func Vowel(s string) string {
 	sl := []rune(s)
 	n := len(sl)
 	for i := 0; i < n; i++ {
-		if (sl[i] == 'a' || sl[i] == 'A') && ((i != 0 && ((sl[i-1] == ' ') || sl[i-1] == '\'') || (i == 0)) || ((i != n-1 && sl[i+1] == ' ') && (i != 0 && !Check_words(string(sl[i-1]))))) {
+		if (sl[i] == 'a' || sl[i] == 'A') && ((i != 0 && ((sl[i-1] == ' ') || sl[i-1] == '\'') || (i == 0)) || ((i != n-1 && sl[i+1] == ' ') && (i != 0 && !ValidLetter(string(sl[i-1]))))) {
 
 			j := i + 1
 			for j != n && sl[j] == ' ' {
